@@ -160,7 +160,7 @@ class Query:
 class Mutation:  
    @strawberry.mutation  
    def addBook(self, title: str, author_id: int) -> BookType:  
-       new_id = max(book.id for book in books) \+ 1 if books else 1  
+       new_id = max(book.id for book in books) + 1 if books else 1  
        new_book = Book(id=new_id, title=title, author_id=author_id)  
        books.append(new_book)  
        return new_book
@@ -170,7 +170,7 @@ schema = strawberry.Schema(query=Query, mutation=Mutation)
 # -------------------------  
 # FastAPI app  
 # -------------------------  
-app = FastAPI(title="Books API (REST \+ GraphQL)")  
+app = FastAPI(title="Books API (REST + GraphQL)")  
 graphql_app = GraphQLRouter(schema)  
 app.include_router(graphql_app, prefix="/graphql")
 
