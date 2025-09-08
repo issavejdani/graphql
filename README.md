@@ -203,7 +203,7 @@ def get_book_rest(book_id: int):
 def create_book(book: Book):  
    books.append(book)  
    return book
-'''
+```
 
 **Benefits and limitations**  
 Software development is about tradeoffs. There is no one right or wrong answer. Choosing between RESTful and GraphQL is no exception and you, as a system architect or a decision maker, need to consider all the possibilities and challenges when deciding to switch to GraphQL. Here is a side-by-side example of the difference between the two:
