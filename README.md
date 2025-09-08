@@ -54,7 +54,8 @@ Like RESTful, it is an API architecture. It works over http and can return JSON.
 
 Unlike RESTful, there is no need to implement several endpoints for each of your resources, and all your CRUD operations for a single resource can be handled using only one URL. As the name says, like SQL query, it is a query language that enables you to filter the API response using queries instead of receiving the whole payload. 
 
-![][image1]
+![Image](https://github.com/user-attachments/assets/820c99c9-8ca4-4522-a79d-c1ef2bf4399c)
+
 
 In our sample code, the only endpoint you require to implement all CRUD operations is ‘**/graphql’.** Depending on the input object and parameters in the request object, the result would act differently.
 
