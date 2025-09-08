@@ -1,6 +1,6 @@
-**Why is GraphQL gaining adoption?**
+## Why is GraphQL gaining adoption?
 
-**The problem**  
+### The problem
 As a senior developer or a system architect, in the era of enterprise products and microservice architecture, you probably had the chance to develop hundreds of API endpoints. The most common approach to implementing these endpoints is to use the RESTful API design. You can handle all your CRUD operations by creating multiple endpoints for each resource. However, as the product grows bigger and the number of endpoints increases, you may face some of the following challenges:
 
 * Managing and maintaining multiple endpoints can be a painful experience  
@@ -47,8 +47,8 @@ We may want to have the following endpoints to implement CRUD operations:
 | **PATCH** | `/authors/{id}` | Update part of an author (partial update) |
 | **DELETE** | `/authors/{id}` | Delete an author |
 
-**The solution**  
-Improving system performance is broad topic and there are many factors that can affect the overall performance of a system. Here in this article, we are mostly focusing on code optimization and going to talk about a solution that you can implement, as a senior developer. An API design approach that has recently gained popularity. It is called GraphQL design. 
+### The solution
+Improving system performance is broad topic and there are many factors that can affect the overall performance of a system. Here in this article, we are mostly focusing on code optimization and going to talk about a solution that you can implement, as a senior developer. An API design approach that has recently gained popularity. It is called [GraphQL](https://graphql.org/) design. 
 
 Like RESTful, it is an API architecture. It works over http and can return JSON. 
 
@@ -57,7 +57,7 @@ Unlike RESTful, there is no need to implement several endpoints for each of your
 ![Image](https://github.com/user-attachments/assets/4f11fdb9-1d5b-4fa0-a166-b6292dab7b31)
 
 
-In our sample code, the only endpoint you require to implement all CRUD operations is ‘**/graphql’.** Depending on the input object and parameters in the request object, the result would act differently.
+In our [sample code](#sample_code), the only endpoint you require to implement all CRUD operations is ‘**/graphql’.** Depending on the input object and parameters in the request object, the result would act differently.
 
 Here are some request and response examples:
 
@@ -69,8 +69,9 @@ Here are some request and response examples:
 
 As you can see in the table above, you have absolute control over what the endpoint responds with by changing the request object. 
 
-**Sample Code**  
-Below is a Python sample code of implementing both RESTful and GraphQL using FastAPI. As mentioned above, there are multiple endpoints in RESTful design and only one in GraphQL.
+<a id="sample_code"></a>
+### Sample Code
+Below is a Python sample code for implementing both RESTful and GraphQL using [FastAPI](https://fastapi.tiangolo.com/). As mentioned above, there are multiple endpoints in RESTful design and only one in GraphQL.
 
 ```python
 # app.py  
